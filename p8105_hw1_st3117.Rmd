@@ -60,4 +60,19 @@ logical vector can be convert to numeric, and "true" and "flase"" are treated as
 For factor vectors, R re-orders the factors alphabetically, and assigns numeric numbers to each level. In my case, it assigns 1 to "high" and 2 to "low"."
 Function as.numeric cannot treat character vector in my case and it returns 10 "NA"s. However, if I use number "1", "2" as my character vector, then it will return as numeric vector 1, 2.
 
+Problem 1_3 The chunk below does a two-step converting.
+
+```{r problem 1_3}
+
+# Convert character variable from character to factor to numeric
+as.numeric(as.factor(data1$vec_char))
+
+# Convert factor variable from factor to character to numeric
+as.numeric(as.character(data1$vec_factor))
+```
+
+In the first case, function as.factor converts my character vector to a factor vector. Then function as.numeric reorders the  factors alphabetically, and assigns numeric numbers to each level.
+In the second case, function as.character converts my factor vector to a character vector, thus cannot be treated and returns 10 "NA"s.
+
+
 
