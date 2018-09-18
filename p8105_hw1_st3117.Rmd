@@ -1,0 +1,11 @@
+---
+title: "Homework 1"
+author: "Sha Tao"
+date: "September 17, 2018"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+```
+
