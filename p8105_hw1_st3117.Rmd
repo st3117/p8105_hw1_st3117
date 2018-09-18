@@ -9,6 +9,8 @@ output: html_document
 library(tidyverse)
 ```
 
+Problem 1_1 The chunk below creates a data frame with four different vectors, and tries to take mean of them.
+
 ```{r problem1_1 }
 
 set.seed(1)
@@ -42,8 +44,9 @@ mean(data1$vec_logical)
 # mean(vec_factor) doesn't work
 ```
 
-The first two vectors work because a uniform [0, 5] distribution is numeric, and "true" and "false" in logical vectors are treated as 1 and 0. 
-Means cannot be taken from the character vector and factor vector.
+The first two vectors work because a uniform [0, 5] distribution is numeric, and "true" and "false" in logical vectors are treated as 1 and 0. \
+Means cannot be taken from the character vector and factor vector.\
+\
 
 Problem 1_2 The chunk below converts variables from one type to another.
 
@@ -56,9 +59,10 @@ as.numeric(data1$vec_factor)
 
 ```
 
-logical vector can be convert to numeric, and "true" and "flase"" are treated as 1 and 0.
-For factor vectors, R re-orders the factors alphabetically, and assigns numeric numbers to each level. In my case, it assigns 1 to "high" and 2 to "low"."
-Function as.numeric cannot treat character vector in my case and it returns 10 "NA"s. However, if I use number "1", "2" as my character vector, then it will return as numeric vector 1, 2.
+logical vector can be convert to numeric, and "true" and "flase"" are treated as 1 and 0.\
+For factor vectors, R re-orders the factors alphabetically, and assigns numeric numbers to each level. In my case, it assigns 1 to "high" and 2 to "low"."\
+Function as.numeric cannot treat character vector in my case and it returns 10 "NA"s. However, if I use number "1", "2" as my character vector, then it will return as numeric vector 1, 2.\
+\
 
 Problem 1_3 The chunk below does a two-step converting.
 
@@ -71,8 +75,9 @@ as.numeric(as.factor(data1$vec_char))
 as.numeric(as.character(data1$vec_factor))
 ```
 
-In the first case, function as.factor converts my character vector to a factor vector. Then function as.numeric reorders the  factors alphabetically, and assigns numeric numbers to each level.
-In the second case, function as.character converts my factor vector to a character vector, thus cannot be treated and returns 10 "NA"s.
+In the first case, function as.factor converts my character vector to a factor vector. Then function as.numeric reorders the  factors alphabetically, and assigns numeric numbers to each level.\
+In the second case, function as.character converts my factor vector to a character vector, thus cannot be treated and returns 10 "NA"s.\
+\
 
 Problem 2_1 The chunks below creates a data frame for later plotting.
 
@@ -103,9 +108,10 @@ data2 = tibble(
 
 ```
 
-The dataset "data2" is a `r ncol(data2)` by `r nrow(data2)` table.
-The mean of the variable x is `r round(mean(data2$x), digit = 2)`, while the median of the variable x is `r round(median(data2$x), digit = 2)`.
-There is `r (sum(data2$xy_numeric)/1000)*100`% of cases which the logical vector "x + y > 0" is true.
+The dataset "data2" is a `r ncol(data2)` by `r nrow(data2)` table.\
+The mean of the variable x is `r round(mean(data2$x), digit = 2)`, while the median of the variable x is `r round(median(data2$x), digit = 2)`.\
+There is `r (sum(data2$xy_numeric)/1000)*100`% of cases which the logical vector "x + y > 0" is true.\
+\
 
 Problem 2_2 The chunk below makes scatterplots of y vs x, color points using different variables.
 
