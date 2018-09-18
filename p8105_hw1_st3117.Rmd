@@ -42,9 +42,22 @@ mean(data1$vec_logical)
 # mean(vec_factor) doesn't work
 ```
 
-The first two vectors work because a uniform [0, 5] distribution is numeric, and "true" and "false" in logical vectors are treated as 1 and 0. Means cannot be taken from the character vector and factor vector.
+The first two vectors work because a uniform [0, 5] distribution is numeric, and "true" and "false" in logical vectors are treated as 1 and 0. 
+Means cannot be taken from the character vector and factor vector.
 
+Problem 1_2 The chunk below converts variables from one type to another.
 
+```{r problem 1_2, results = "hide"}
 
+#applies the as.numeric function to the logical, character, and factor variables
+as.numeric(data1$vec_logical)
+as.numeric(data1$vec_char)
+as.numeric(data1$vec_factor)
+
+```
+
+logical vector can be convert to numeric, and "true" and "flase"" are treated as 1 and 0.
+For factor vectors, R re-orders the factors alphabetically, and assigns numeric numbers to each level. In my case, it assigns 1 to "high" and 2 to "low"."
+Function as.numeric cannot treat character vector in my case and it returns 10 "NA"s. However, if I use number "1", "2" as my character vector, then it will return as numeric vector 1, 2.
 
 
