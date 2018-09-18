@@ -107,3 +107,28 @@ The dataset "data2" is a `r ncol(data2)` by `r nrow(data2)` table.
 The mean of the variable x is `r round(mean(data2$x), digit = 2)`, while the median of the variable x is `r round(median(data2$x), digit = 2)`.
 There is `r (sum(data2$xy_numeric)/1000)*100`% of cases which the logical vector "x + y > 0" is true.
 
+Problem 2_2 The chunk below makes scatterplots of y vs x, color points using different variables.
+
+```{r problem 2_2}
+
+# Make a scatterplot of y vs x,  color points using the logical variable
+plot_logical = ggplot(data2, aes(x, y, color = data2$xy_logical)) +
+        geom_point()
+plot_logical
+
+# Make a scatterplot of y vs x,  color points using the numeric variable
+plot_numeric = ggplot(data2, aes(x, y, color = data2$xy_numeric)) +
+        geom_point()
+plot_numeric
+
+# Make a scatterplot of y vs x,  color points using the factor variable
+plot_factor = ggplot(data2, aes(x, y, color = data2$xy_factor)) +
+        geom_point()
+plot_factor
+
+# Save the first plot
+ggsave("plot_logical.png", plot_logical)
+
+```
+
+Since x and y are both random samples from standard normal distribution, the boundary between whether x + y > 0 follows the function y = -x. Since the numeric vector is converted from the logical vector, and the factor vector is converted from numeric vector, they all contains two values, and the plots shows the same pattern. 
