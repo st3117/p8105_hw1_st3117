@@ -32,4 +32,19 @@ data1 = tibble(
 # Print data1
 data1
 
+# Try to take the mean of the numeric variable
+mean(data1$vec_unif)
+
+# Try to take the mean of the logical variable
+mean(data1$vec_logical)
+
+# mean(data1$vec_char) doesn't work
+# mean(vec_factor) doesn't work
 ```
+
+The first two vectors work because a uniform [0, 5] distribution is numeric, and "true" and "false" in logical vectors are treated as 1 and 0. Means cannot be taken from the character vector and factor vector.
+
+
+
+
+

@@ -162,6 +162,15 @@ data1</code></pre>
 ##  8    3.30  TRUE        like     low       
 ##  9    3.15  TRUE        Data     high      
 ## 10    0.309 FALSE       Science  high</code></pre>
+<pre class="r"><code># Try to take the mean of the numeric variable
+mean(data1$vec_unif)</code></pre>
+<pre><code>## [1] 2.757569</code></pre>
+<pre class="r"><code># Try to take the mean of the logical variable
+mean(data1$vec_logical)</code></pre>
+<pre><code>## [1] 0.6</code></pre>
+<pre class="r"><code># mean(data1$vec_char) doesn't work
+# mean(vec_factor) doesn't work</code></pre>
+<p>The first two vectors work because a uniform [0, 5] distribution is numeric, and “true” and “false” in logical vectors are treated as 1 and 0. Means cannot be taken from the character vector and factor vector.</p>
 
 
 
