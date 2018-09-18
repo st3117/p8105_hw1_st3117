@@ -9,3 +9,27 @@ output: html_document
 library(tidyverse)
 ```
 
+```{r problem1_1 }
+
+set.seed(1)
+
+# Create a data frame
+data1 = tibble(
+  
+  # Create a random sample of size 10 from a uniform [0, 5] distribution
+  vec_unif = runif(10, min = 0, max = 5),
+
+  # Create a logical vector indicating whether elements of the sample are greater than 2
+  vec_logical = vec_unif > 2,
+
+  # Create a (length-10) character vector
+  vec_char = c("My", "name", "is", "Sha", "Tao", "and", "I", "like", "Data", "Science"),
+
+  # Create a (length-10) factor vector
+  vec_factor = factor(c("low", "low", "low", "high", "high", "low", "low", "low", "high", "high"))
+)
+
+# Print data1
+data1
+
+```
