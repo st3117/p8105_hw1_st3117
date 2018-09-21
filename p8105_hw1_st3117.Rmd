@@ -58,7 +58,7 @@ For factor vectors, R re-orders the factors alphabetically, and assigns numeric 
 Function as.numeric cannot treat character vector in my case and it returns 10 "NA"s. However, if I use number "1", "2" as my character vector, then it will return as numeric vector 1, 2.
 
 
-### Problem 1_3 The chunk below does a two-step converting.
+## Problem 1_3 The chunk below does a two-step converting.
 
 ```{r problem 1_3}
 
@@ -77,16 +77,16 @@ In the second case, function as.character converts my factor vector to a charact
 
 ```{r problem 2_1}
 
+set.seed(2)
+
 # Create a random sample x of size 1000 from a standard Normal distribution
-set.seed(1)
 x = rnorm(1000)
 
 # Create a random sample y of size 1000 from a standard Normal distribution
-set.seed(2)
 y = rnorm(1000)
 
 # Create a data frame including:
-# 1. x 2. y
+# 1. x  2. y
 # 3. A logical vector indicating whether the x + y > 0
 # 4. A numeric vector by coercing the above logical vector
 # 5. A factor vector created by coercing the above logical vector
